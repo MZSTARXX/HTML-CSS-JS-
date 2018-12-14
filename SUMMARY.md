@@ -8,4 +8,6 @@
 * [lesson02\(3\)](lesson023.md)
 * [lesson02\(4\)](lesson024.md)
 * [lesson03](lesson03.md)
+* [lesson04](lesson04.md)
+* [lesson042](lesson042.md)
 
