@@ -12,5 +12,6 @@
 * [lesson042](lesson042.md)
 * [lesson043](lesson043.md)
 * [lesson044](lesson044.md)
-* lesson05
+* [lesson05](lesson05.md)
+* [lesson052](lesson052.md)
 
