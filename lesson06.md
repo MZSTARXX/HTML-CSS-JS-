@@ -86,6 +86,160 @@ font-family属性用于声明应使用哪种字体以及哪种后备或替换字
 
 学会如何对齐，修饰，缩进，转换和空格文本。
 
+#### 文字对齐
+
+对齐文本是在页面上构建节奏和流动的重要部分;我们使用该text-align属性执行此操作。
+
+text-align有五个值：left，right，center，justify，和inherit。它们将文本对齐到左侧，右侧或中心，或者它们对齐文本。
+
+**PS: **text-align的值left和right将一个元素的左侧或右侧中的文本对齐，而float值left和right将移动整个元件。
+
+#### 文字装饰
+
+该text-decoration属性提供了一些修饰文本的方法。它接受的关键字值none，underline，overline，line-through，和inherit。
+
+```
+例：.note {text-decoration: underline;}
+```
+
+#### 文字缩进
+
+该text-indent属性可用于缩进元素中的第一行文本。此属性可以使用所有常用长度值，包括像素，点，百分比等。正值将向内缩进文本，而负值将向外缩进文本。
+
+```
+例：p {text-indent: 20px;}
+```
+
+#### 文字阴影
+
+该text-shadow属性允许我们为文本添加阴影或多个阴影。该属性通常需要四个值，所有值都从左到右依次列出。前三个值是长度，最后一个值是颜色。在三个长度值中，第一个值确定阴影的水平偏移，第二个值确定阴影的垂直偏移，第三个值确定阴影的模糊半径。第四个也是最后一个值是阴影的颜色，可以是color属性中使用的任何颜色值。
+
+```
+例：p {text-shadow: 3px 6px 2px rgba(0, 0, 0, .3);}
+```
+
+#### 盒子阴影
+
+ext-shadow属性专门在元素的文本上放置阴影。如果我们想在整个元素上放置阴影，我们可以使用该box-shadow属性。
+
+box-shadow属性就像text-shadow属性一样，接受水平和垂直偏移的值，模糊和颜色。
+
+box-shadow属性还接受在颜色值之前的可选第四长度值，用于阴影的扩散。作为正长度值，展开将使阴影扩大到大于其应用的元素的大小，并且作为负长度值，展开将缩小阴影以使其小于其应用的元素的大小。
+
+最后，box-shadow属性可以在inset值的开头包含可选值，以将阴影放置在元素内而不是元素外部。
+
+#### 文字转换
+
+当font-variant属性查找字体的替代变体时，该text-transform属性将更改内联文本而无需替换字体。该text-transform属性接受五个值：none，capitalize，uppercase，lowercase，和inherit。
+
+```
+例：p {text-transform: uppercase;}
+```
+
+#### 字母间距
+
+使用该letter-spacing属性，我们可以调整页面上字母之间的空间（或跟踪）。正长度值将推动字母彼此远离，而负长度值将字母拉得更近。关键字值none将使字母之间的空格返回其正常大小。
+
+使用letter-spacing属性的相对长度值将有助于确保font-size在文本更改时保持字母之间的正确间距。
+
+```
+例：p {letter-spacing: -.5em;}
+```
+
+#### 单词间距
+
+与letter-spacing属性非常相似，可以使用word-spacing属性调整元素中单词之间的空间。该word-spacing属性接受与属性相同的长度值和关键字letter-spacing。但是，不是将字母分开，而是word-spacing在单词之间应用这些值。
+
+```
+例：p {word-spacing: .25em;}
+```
+
+## 四、引文
+
+&lt;cite&gt;：用于引用广告素材作品，作者或资源
+
+&lt;q&gt;：用于简短的内联引用
+
+&lt;blockquote&gt;：用于更长的外部引文
+
+### 引用创意作品
+
+&lt;cite&gt;元素必须包含作品的标题，作者的名称或作品的URL引用。默认情况下，&lt;cite&gt;元素中包含的内容将在浏览器中以斜体显示。
+
+```
+例：<p>The book <cite><a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537">Steve Jobs</a></cite> is truly inspirational.</p>
+```
+
+### 对话与散文引文
+
+&lt;q&gt;元素在语义上表示引用的对话或散文，不应用于任何其他目的。
+
+包含在&lt;q&gt;元素上的可选属性是cite属性，该cite属性充当URL的形式引用。此属性不会改变元素的外观;它只是为屏幕阅读器和其他设备增加了价值。由于该属性在浏览器中不可查看，因此在实际报价旁边提供指向此源的超链接也很有帮助。
+
+```
+<p><a href="http://www.businessweek.com/magazine/content/06_06/b3970001.htm">Steve Jobs</a> once said, <q cite="http://www.businessweek.com/magazine/content/06_06/b3970001.htm">One home run is much better than two doubles.</q></p>
+```
+
+### 外部引文
+
+要引用来自外部源并跨越多行的大块文本，我们将使用该&lt;blockquote&gt;元素。这&lt;blockquote&gt;是一个块级元素，可能包含嵌套在其中的其他块级元素，包括标题和段落。
+
+```
+例：<blockquote>
+  <p>&#8220;In most people&#8217;s vocabularies, design is a veneer. It&#8217;s interior decorating. It&#8217;s the fabric of the curtains, of the sofa. But to me, nothing could be further from the meaning of design. Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product.&#8221;</p>
+    </blockquote>
+```
+
+&lt;blockquote&gt;元素中使用的较长引号通常包括引用。该引用可以包括cite属性和&lt;cite&gt;元素。该cite属性可以包含在&lt;blockquote&gt;元素上 - 与&lt;q&gt;之前在元素上使用的方式相同- 以URL的形式提供引用。
+
+&lt;cite&gt;元素可以落在实际报价本身之后，以指定报价的原始来源.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
